@@ -1,0 +1,17 @@
+local ts =game:GetService("TweenService")
+local p1=script.Parent.Part1
+local p2=script.Parent.Part2
+local ball=script.Parent.Balloon
+
+local function moveItem(item,wp)
+	local ti=TweenInfo.new(2,Enum.EasingStyle.Linear,
+		Enum.EasingDirection.Out,0,false,0)
+	local tween=ts:Create(item,ti,{Position=wp.Position})
+	tween:Play()
+	wait(2)
+end
+wait(5)
+
+moveItem(ball,p1)
+moveItem(ball,p2)
+moveItem(ball,p1)
