@@ -1,0 +1,18 @@
+local part=script.Parent
+
+local TweenService = game:GetService("TweenService")
+
+local tweenInfo = TweenInfo.new(
+	5,
+	Enum.EasingStyle.Sine,
+	Enum.EasingDirection.Out,
+	-1,
+	true,
+	0
+)
+local goal = {}
+goal.Position = Vector3.new(10, 10, 0)
+goal.Color = Color3.new(0, 1, 0)
+local tween= TweenService:Create(part,tweenInfo,goal)
+
+tween:Play()
