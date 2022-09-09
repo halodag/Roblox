@@ -1,0 +1,5 @@
+local elevator =script.Parent
+
+for i=1,100 do
+	elevator:PivotTo(elevator:GetPivot()+Vector3.new(0,1,0))
+end
